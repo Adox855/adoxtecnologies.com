@@ -3,55 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adox Technologies - Empowering IT & Education</title>
+  <title>Adox Technologies - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
-  <style>
-    body {margin:0; font-family:'Montserrat',Arial,sans-serif; background:#f5f9ff; color:#1a2940;}
-    .navbar {
-      background:#072a6c; padding:0 40px; display:flex; align-items:center; height:70px; box-shadow:0 2px 8px rgba(0,0,0,.06);
-    }
-    .navbar h1 {color:#fff; font-size:2em; flex:1;}
-    .nav-links {display:flex;}
-    .nav-links a {
-      color:#e0e6f7; text-decoration:none; margin-left:28px; font-weight:500; transition:color .2s;
-    }
-    .nav-links a:hover, .nav-links a.active {color:#fadb2f;}
-    .hero-section {
-      background:linear-gradient(90deg,#072a6c 60%,#3670c7 100%); color:#fff; padding:70px 0 60px 0; text-align:center;
-    }
-    .hero-section h2 {font-size:2.7em; margin-bottom:14px; font-weight:700;}
-    .hero-section p {font-size:1.2em; margin-bottom:24px;}
-    .hero-btn {
-      background:#fadb2f; color:#072a6c; padding:14px 38px; font-size:1.1em; border:none; border-radius:30px;
-      font-weight:700; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.10); transition:background .2s;
-    }
-    .hero-btn:hover {background:#ffe874;}
-    .section {max-width:1100px; margin:60px auto; padding:0 24px;}
-    .section-title {color:#072a6c; font-size:2em; margin-bottom:20px; font-weight:700;}
-    .card-list {display:flex; flex-wrap:wrap; gap:24px;}
-    .card {
-      background:#fff; border-radius:14px; box-shadow:0 4px 18px rgba(7,42,108,0.07); padding:34px 24px; flex:1 1 300px;
-      min-width:250px; display:flex; flex-direction:column; justify-content:space-between; transition:transform .17s;
-    }
-    .card:hover {transform:translateY(-7px) scale(1.03); box-shadow:0 8px 28px rgba(7,42,108,0.11);}
-    .card .icon {font-size:2.5em; color:#1a4b9a; margin-bottom:14px;}
-    .card-title {font-size:1.2em; font-weight:700; margin-bottom:10px;}
-    .card-desc {color:#343a40;}
-    .people-highlight {margin:60px auto 30px auto; display:flex; gap:32px; flex-wrap:wrap;}
-    .person {
-      background:#f7fafd; border-radius:10px; box-shadow:0 2px 8px rgba(7,42,108,.06); display:flex; align-items:center;
-      padding:18px 24px; flex:1 1 310px; min-width:270px;
-    }
-    .person img {width:80px; height:80px; border-radius:10px; object-fit:cover; margin-right:20px; background:#e0e6f7;}
-    .person-info {flex:1;}
-    .person-name {font-size:1.08em; font-weight:700; color:#072a6c;}
-    .person-title {font-size:.97em; color:#1a4b9a;}
-    .footer {
-      background:#1a2940; color:#dbe4f7; text-align:center; padding:30px 10px 14px 10px; margin-top:60px; font-size:1em;
-    }
-    .footer a {color:#fadb2f; text-decoration:none;}
-    @media (max-width:900px){.card-list{flex-direction:column;}.people-highlight{flex-direction:column;gap:18px;}}
-  </style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <nav class="navbar">
@@ -68,9 +22,18 @@
 
   <div class="hero-section">
     <h2>Empowering IT Solutions & Education</h2>
-    <p>Your trusted partner for digital transformation, training, and smart learning tools.<br>
-    Building the future with technology and knowledge.</p>
+    <p>Your trusted partner for digital transformation, training, and smart learning tools.</p>
     <a href="services.html"><button class="hero-btn">Explore Our Solutions</button></a>
+  </div>
+
+  <div class="carousel">
+    <img src="images/slide1.jpg" class="active" alt="Slide 1">
+    <img src="images/slide2.jpg" alt="Slide 2">
+    <img src="images/slide3.jpg" alt="Slide 3">
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">&#10094;</button>
+      <button onclick="nextSlide()">&#10095;</button>
+    </div>
   </div>
 
   <div class="section">
@@ -89,7 +52,7 @@
       <div class="card">
         <div class="icon">🧑‍🏫</div>
         <div class="card-title">Training Programs</div>
-        <div class="card-desc">Corporate & academic training in coding, cloud, data, and digital skills to boost your career or business.</div>
+        <div class="card-desc">Corporate & academic training in coding, cloud, data, and digital skills.</div>
       </div>
     </div>
   </div>
@@ -105,9 +68,9 @@
         </div>
       </div>
       <div class="person">
-        <img src="images/saumya.jpg" alt="Dr. Saumya Chaurasia" />
+        <img src="images/saumaya.jpg" alt="Dr. Saumaya Chaurasia" />
         <div class="person-info">
-          <div class="person-name">Dr. Saumya Chaurasia</div>
+          <div class="person-name">Dr. Saumaya Chaurasia</div>
           <div class="person-title">Director</div>
         </div>
       </div>
@@ -115,7 +78,18 @@
   </div>
 
   <div class="footer">
-    &copy; 2025 Adox Technologies | <a href="mailto:info@adoxtecnologies.com">info@adoxtecnologies.com</a> | <a href="tel:+918737816599">+91-8737816599</a>
+    &copy; 2025 Adox Technologies | <a href="mailto:adoxtechnologies306@gmail.com">adoxtechnologies306@gmail.com</a>
   </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    function showSlide(index){
+      slides.forEach((slide,i)=>{slide.classList.remove('active'); if(i===index) slide.classList.add('active');});
+    }
+    function nextSlide(){currentSlide=(currentSlide+1)%slides.length;showSlide(currentSlide);}
+    function prevSlide(){currentSlide=(currentSlide-1+slides.length)%slides.length;showSlide(currentSlide);}
+    setInterval(nextSlide,5000);
+  </script>
 </body>
 </html>

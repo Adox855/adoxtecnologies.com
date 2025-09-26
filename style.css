@@ -1,0 +1,40 @@
+body {margin:0; font-family:'Montserrat',Arial,sans-serif; background:#f5f9ff; color:#1a2940;}
+.navbar {background:#072a6c; padding:0 40px; display:flex; align-items:center; height:70px; box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.navbar h1 {color:#fff; font-size:2em; flex:1;}
+.nav-links {display:flex;}
+.nav-links a {color:#e0e6f7; text-decoration:none; margin-left:28px; font-weight:500; transition:color .2s;}
+.nav-links a:hover, .nav-links a.active {color:#fadb2f;}
+.hero-section {background:linear-gradient(90deg,#072a6c 60%,#3670c7 100%); color:#fff; padding:70px 0 60px 0; text-align:center;}
+.hero-section h2 {font-size:2.7em; margin-bottom:14px; font-weight:700; animation: fadeInDown 1s;}
+.hero-section p {font-size:1.2em; margin-bottom:24px; animation: fadeInUp 1s;}
+.hero-btn {background:#fadb2f; color:#072a6c; padding:14px 38px; font-size:1.1em; border:none; border-radius:30px;
+  font-weight:700; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.10); transition:background .2s;}
+.hero-btn:hover {background:#ffe874;}
+.section {max-width:1100px; margin:60px auto; padding:0 24px;}
+.section-title {color:#072a6c; font-size:2em; margin-bottom:20px; font-weight:700; animation: fadeIn 1.2s;}
+.card-list {display:flex; flex-wrap:wrap; gap:24px;}
+.card {background:#fff; border-radius:14px; box-shadow:0 4px 18px rgba(7,42,108,0.07); padding:34px 24px; flex:1 1 300px;
+  min-width:250px; display:flex; flex-direction:column; justify-content:space-between; transition:transform .17s; animation: zoomIn 1s;}
+.card:hover {transform:translateY(-7px) scale(1.03); box-shadow:0 8px 28px rgba(7,42,108,0.11);}
+.card .icon {font-size:2.5em; color:#1a4b9a; margin-bottom:14px;}
+.card-title {font-size:1.2em; font-weight:700; margin-bottom:10px;}
+.card-desc {color:#343a40;}
+.people-highlight {margin:60px auto 30px auto; display:flex; gap:32px; flex-wrap:wrap;}
+.person {background:#f7fafd; border-radius:10px; box-shadow:0 2px 8px rgba(7,42,108,.06); display:flex; align-items:center;
+  padding:18px 24px; flex:1 1 310px; min-width:270px; animation: fadeIn 1s;}
+.person img {width:80px; height:80px; border-radius:10px; object-fit:cover; margin-right:20px; background:#e0e6f7;}
+.person-info {flex:1;}
+.person-name {font-size:1.08em; font-weight:700; color:#072a6c;}
+.person-title {font-size:.97em; color:#1a4b9a;}
+.footer {background:#1a2940; color:#dbe4f7; text-align:center; padding:30px 10px 14px 10px; margin-top:60px; font-size:1em;}
+.footer a {color:#fadb2f; text-decoration:none;}
+.carousel {position:relative; max-width:1000px; margin:40px auto; overflow:hidden; border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.15);}
+.carousel img {width:100%; display:none;}
+.carousel img.active {display:block;}
+.carousel-buttons {position:absolute; top:50%; width:100%; display:flex; justify-content:space-between; transform:translateY(-50%);}
+.carousel-buttons button {background:rgba(0,0,0,0.5); border:none; color:white; font-size:2em; cursor:pointer; padding:5px 15px;}
+@keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+@keyframes fadeInUp {from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);}}
+@keyframes fadeInDown {from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);}}
+@keyframes zoomIn {from {opacity:0; transform:scale(0.9);} to {opacity:1; transform:scale(1);}}
+@media (max-width:900px){.card-list{flex-direction:column;}.people-highlight{flex-direction:column;gap:18px;}}
